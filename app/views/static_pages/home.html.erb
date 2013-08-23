@@ -1,2 +1,10 @@
-<h1>Job Application Tracker</h1>
-<p>Sign-up Now!</p>
+<% if signed_in? %>
+  <div class="center hero-unit">
+    <p>Welcome, <%= current_user.name %></p>
+  </div>
+<% else %>
+<div class="center hero-unit">
+  <h1>Job Application Tracker</h1>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+<% end %>
