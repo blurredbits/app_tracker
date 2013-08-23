@@ -1,0 +1,10 @@
+<div id="jobs">
+    <div class="job">
+      <div class="name"><%= @job.name %></div>
+      <div class="actions">
+        <%= link_to "edit", edit_job_path(@job) %> |
+        <%= link_to "remove", @job, confirm: "Are you sure?", method: :delete %>
+      </div>
+    </div>
+  <div class="clear"></div>
+</div>
